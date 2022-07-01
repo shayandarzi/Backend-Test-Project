@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    show-sql: false
+    database: h2
+    generate-ddl: true
+    defer-datasource-initialization: true
